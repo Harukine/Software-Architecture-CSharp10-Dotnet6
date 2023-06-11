@@ -27,6 +27,11 @@ Dictate how software is produced and delivered by teams. Over time, various mode
 2. Questionnaires
 3. Interviews
 4. Observation
+### Analyzing requirements
+- Once you have user needs, analyzing the requirement techniques.
+1. Prototyping: Prototypes are fantastic to clarify and materialize the system requirements. (Pencil Project, Figma)
+2. Use cases: The Unified Modeling Language (UML) use case model is an option if you need
+detailed documentation. (LucidCharts)
 
 ## Using design techniques as a helpful tool
 
