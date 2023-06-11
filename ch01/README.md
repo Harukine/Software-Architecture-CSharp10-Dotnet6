@@ -32,7 +32,8 @@ Dictate how software is produced and delivered by teams. Over time, various mode
 1. Prototyping: Prototypes are fantastic to clarify and materialize the system requirements. (Pencil Project, Figma)
 2. Use cases: The Unified Modeling Language (UML) use case model is an option if you need
 detailed documentation. (LucidCharts)
-
+### Writing the specifications
+- After completing the analysis phase, it is crucial to document the findings in a requirements specification. This document serves as a technical contract between the user and the development team. To ensure clarity and understanding, the specification should follow certain guidelines: stakeholders of all technical backgrounds should comprehend it, classification of each requirement is necessary, and the use of simple future tense is recommended. Ambiguity and controversy must be avoided. Additional information, such as an introductory chapter, glossary, user description, and functional/non-functional requirements, can provide context for the project. When using user stories, it is beneficial to write short sentences that outline each user's needs, goals, and reasons for the requested features. These stories aid in prioritization and can guide the creation of automated acceptance tests.
 ## Using design techniques as a helpful tool
 
 ## Common cases where the requirements gathering process impacts system results
