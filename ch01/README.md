@@ -39,6 +39,7 @@ detailed documentation. (LucidCharts)
 ### Reviewing the specifications
 - After writing the specification, it is important to seek confirmation from stakeholders regarding their agreement. This can be done through a review meeting or online collaboration tools. During this stage, prototypes, documents, and gathered information are presented. Once everyone agrees with the specification, you can proceed to study the optimal implementation approach for that particular part of the project. It's worth noting that this process can be applied to either the entire software or just a specific component.
 ## Using design techniques as a helpful tool
+- Defining a solution and choosing the appropriate technology can be challenging for software architects. It is not uncommon for customers to present a solution that may have architectural and functional flaws, leading to future problems. In cases where the customer is unsure of the best solution, design techniques like Design Thinking and Design Sprint can be valuable. These techniques help uncover genuine requirements and provide software architects with the opportunity to guide their team in using the right tools for a successful project.
 
 ## Common cases where the requirements gathering process impacts system results
 
