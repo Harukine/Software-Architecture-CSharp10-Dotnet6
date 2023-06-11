@@ -45,4 +45,6 @@ detailed documentation. (LucidCharts)
 ### Design Sprint
 - Design Sprint is a five-day process developed by Google to address critical business questions through design. It allows for quick testing and learning of ideas when building and launching a solution to the market. The process involves a week-long effort by experts in a designated war room. Each day has a specific focus, including identifying the sprint target and mapping the challenge, sketching solutions, deciding on the best solutions and creating a storyboard, prototyping the chosen idea, and finally, presenting the prototype to customers and gathering feedback. Both Design Thinking and Design Sprint emphasize the importance of prototyping to accelerate customer feedback and make ideas more tangible for end users.
 ## Common cases where the requirements gathering process impacts system results
-
+1. Performance
+2. Implementation
+3. Usability
