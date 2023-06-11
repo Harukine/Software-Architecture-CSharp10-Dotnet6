@@ -21,6 +21,13 @@ Dictate how software is produced and delivered by teams. Over time, various mode
 - Two crucial tasks in software development are defining the development process and gathering software requirements. These tasks play a vital role in ensuring project success. Defining a suitable process, which may occur during project planning, sets the foundation for efficient development. Gathering requirements, a continuous and challenging process, helps shape the software architecture by addressing user needs. These tasks are considered essential for achieving success in software development projects, and as a software architect, your role is to facilitate them to minimize potential issues and guide your team effectively.
 ### Understanding the requirements gathering process
 - Requirements can be represented in various ways, but the traditional approach involves writing a detailed specification before analysis. However, agile methods propose using user stories at the start of development cycles. Regardless of the approach chosen, requirements engineering involves specific steps to gather requirements. It is important to ensure the feasibility of the solution during this process, which may include a separate feasibility analysis or be integrated into project planning. The requirements engineering process provides valuable information that informs software architecture decisions.
+### Detecting exact user needs
+- Common techniques of elicitating user requirements.
+1. The power of imagination
+2. Questionnaires
+3. Interviews
+4. Observation
+
 ## Using design techniques as a helpful tool
 
 ## Common cases where the requirements gathering process impacts system results
