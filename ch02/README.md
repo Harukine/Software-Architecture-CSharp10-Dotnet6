@@ -1,1 +1,2 @@
 # 2 Non-Functional Requirements
+Non-functional requirements play a crucial role in the architectural design of a software system. Factors such as scalability, availability, performance, security, and interoperability need to be carefully analyzed to ensure that user needs are met. While they may not be directly related to the functionality of the software, non-functional requirements significantly impact the quality and effectiveness of the final product. Software architects must pay close attention to these aspects to distinguish between good and bad software.
