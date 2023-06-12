@@ -1,2 +1,5 @@
 # 2 Non-Functional Requirements
 Non-functional requirements play a crucial role in the architectural design of a software system. Factors such as scalability, availability, performance, security, and interoperability need to be carefully analyzed to ensure that user needs are met. While they may not be directly related to the functionality of the software, non-functional requirements significantly impact the quality and effectiveness of the final product. Software architects must pay close attention to these aspects to distinguish between good and bad software.
+
+## Scalability, availability, and resiliency
+- Scalability is not solely dependent on hardware solutions; it also relies on well-architected software that can save costs. The running costs of a system should be considered when making architectural decisions. In cloud computing, resiliency is crucial due to potential system failures and the need to recover without affecting the end user. Working with multiple systems and dealing with transient errors necessitates a focus on resiliency Achieving high availability in a system is possible through scalable and resilient solutions. 
