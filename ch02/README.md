@@ -83,7 +83,12 @@ sudo systemctl stop sample
 ```
 - By following these steps, you can create a service that encapsulates your .NET 6 app on Linux, allowing it to run as a background service without the need for a logged-in user.
 
-# Achieving security by design
+## Achieving security by design
 - The opportunities and techniques for software development are expanding rapidly, especially with the advent of cloud computing. However, these opportunities come with increased complexity and responsibilities for software architects. The changing world, with its focus on apps, social media, Industry 4.0, big data, and artificial intelligence, requires a different approach to security.
 Data protection regulations like the General Data Protection Regulation (GDPR) have a global impact and influence software development practices. As a software architect, it is important to prioritize security by design and have a specialist in information security on your team. This ensures the implementation of necessary policies and practices to prevent cyber attacks and maintain the confidentiality, privacy, integrity, authenticity, and availability of your services.
 ASP.NET Core offers features to help protect applications, including authentication and authorization patterns. The OWASP (Open Web Application Security Project) Cheat Sheet Series provides valuable information on various .NET security practices. Additionally, ASP.NET Core provides APIs and templates to assist with GDPR compliance, such as policy declaration and cookie usage consent.
+
+## List of practices for achieving a safe architecture
+1. Authentication
+2. Sensitive Data
+3. Web Security
