@@ -103,3 +103,12 @@ ASP.NET Core offers features to help protect applications, including authenticat
 - To address common attacks like cross-site request forgery, open redirect, and cross-site scripting, ASP.NET Core provides APIs to mitigate these vulnerabilities. It is important to identify and implement the appropriate security measures for your specific solution.
 - Practicing good programming techniques, such as using parameterized queries to prevent SQL injections, is crucial for maintaining security.
 - Implementing security measures in a layered approach is recommended. This includes establishing policies for data access, including physical access controls. Additionally, developing a disaster recovery plan to handle potential attacks is necessary. The specifics of the disaster recovery solution will depend on the chosen cloud platform.
+
+## Summary
+- Functional requirements, which describe system behavior, need to be complemented by non-functional requirements that address system performance, scalability, availability, resilience, interoperability, usability, and security.
+- To ensure performance, software architects should optimize algorithms, utilize hardware resources efficiently through multithreading, and meet response time and system load requirements while minimizing costs.
+- Scalability refers to a system's ability to handle increasing loads. It can be achieved through vertical scaling (upgrading hardware) or horizontal scaling (replicating and load balancing hardware). Cloud platforms like Azure offer dynamic scalability options without the need to interrupt the application.
+- Interoperability is facilitated by platforms like .NET 6, enabling software to run on various machines and operating systems.
+- Usability involves considerations such as logical item selection, input field order, and overall ease of use for users.
+- Resilience becomes crucial as the complexity of the solution increases. Resilience ensures that the system has predefined actions when failures occur at different software components.
+- Security should be prioritized from the beginning of the design process. Following security guidelines, employing appropriate patterns, and involving a security specialist in the development team help comply with current regulations and protect the system from vulnerabilities.
