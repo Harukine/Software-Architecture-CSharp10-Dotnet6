@@ -6,5 +6,6 @@ Non-functional requirements play a crucial role in the architectural design of a
 
 ## Performance issues that need to be considered when programming in C#
 1. String concatenation
+- The performance issues that can arise from naive string concatenation using the + operator. Each concatenation operation involves copying the contents of the strings into a new string, resulting in increased cost. The overall cost grows exponentially with the number of strings and their average length. While this may not be a concern for small numbers of strings, it becomes problematic for larger quantities. To address this, the StringBuilder class is introduced as an alternative. By queuing the pointers of the strings and copying them only once when calling sb.ToString(), the StringBuilder-based concatenation offers improved performance, growing linearly with the number of strings and their average length. It is important to be mindful of such concatenation scenarios in code, especially in systems handling multiple simultaneous requests, to avoid performance bottlenecks that can impact non-functional requirements.
 2. Exceptions
 3. Multithreading
