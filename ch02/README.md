@@ -37,7 +37,6 @@ Implement efficient selection logic to make it easy for users to select from a l
 - When dealing with descriptions consisting of names or complex strings, algorithms like the Levenshtein algorithm can be used to find the best match for the user's input. These algorithms compare the typed string with the descriptions and calculate a penalty based on missing characters and the distance between character occurrences.
 - The descriptions are ranked based on the number of occurrences of typed characters and the penalty calculated. Sorting is done first by the number of occurrences and then by the lowest penalties.
 - Implementing these selection logic techniques can enhance the user experience and facilitate efficient and accurate selection in user interfaces.
-
-
+[Levenshtein Smart Search Example Project](smart-search)
 
 
