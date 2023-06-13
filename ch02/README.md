@@ -99,3 +99,7 @@ ASP.NET Core offers features to help protect applications, including authenticat
 - We will need to identify and protect sensitive data in your application. Azure provides components like Azure Storage and Azure Key Vault for storing and safeguarding such data. Azure Storage is a suitable option for data storage in the cloud.
 - Azure Key Vault, on the other hand, is specifically designed for protecting application secrets. If your application requires the storage and management of sensitive information, it is recommended to utilize Azure Key Vault to fulfill this requirement.
 3. Web Security
+- Enabling the HTTPS protocol is essential for a secure production solution deployment. Azure Web Apps and ASP.NET Core offer multiple options to not only utilize but also enforce HTTPS.
+- To address common attacks like cross-site request forgery, open redirect, and cross-site scripting, ASP.NET Core provides APIs to mitigate these vulnerabilities. It is important to identify and implement the appropriate security measures for your specific solution.
+- Practicing good programming techniques, such as using parameterized queries to prevent SQL injections, is crucial for maintaining security.
+- Implementing security measures in a layered approach is recommended. This includes establishing policies for data access, including physical access controls. Additionally, developing a disaster recovery plan to handle potential attacks is necessary. The specifics of the disaster recovery solution will depend on the chosen cloud platform.
