@@ -50,3 +50,35 @@ Overall, when dealing with a large number of items, hierarchical navigation and 
 Additionally, differences between Linux and Windows, such as case-sensitivity and path separators, need to be considered when working with files. The Path class and its members can help ensure code compatibility across platforms.
 .NET 6 provides runtime checks that allow code to adapt to the underlying operating system. By utilizing the RuntimeInformation.IsOSPlatform method, developers can conditionally execute code based on the platform, enabling platform-specific functionality or behavior.
 In summary, .NET 6 brings interoperability to Windows developers, allowing them to target Linux and macOS. Consideration should be given to platform-specific differences and the use of runtime checks to adapt code accordingly.
+## Creating a service in linux
+- To create a service in Linux for a command-line .NET 6 app, follow these steps:
+
+- Create a file that will run the command-line app. For example, let's assume the app is named "app.dll" and is located in the "appfolder." The service will check the application every 5,000 milliseconds. Use the following 
+```bash
+cat >sample.service<<EOF
+[Unit]
+Description=Your Linux Service
+After=network.target
+[Service]
+ExecStart=/usr/bin/dotnet $(pwd)/appfolder/app.dll 5000
+Restart=on-failure
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+- Once the file is created, copy the service file to a system location, reload the system, and enable the service to restart on reboots. Execute the following commands:
+```bash
+sudo cp sample.service /lib/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl enable sample
+```
+- You're done! Now you can start, stop, and check the service using the following commands:
+```bash
+# Start the service:
+sudo systemctl start sample
+# View service status:
+sudo systemctl status sample
+# Stop the service:
+sudo systemctl stop sample
+```
+- By following these steps, you can create a service that encapsulates your .NET 6 app on Linux, allowing it to run as a background service without the need for a logged-in user.
