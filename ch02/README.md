@@ -96,4 +96,6 @@ ASP.NET Core offers features to help protect applications, including authenticat
 - Regarding authorization, there are four model options to consider: simple, role-based, claims-based, and policy-based. The choice of model determines the access and permissions for each user. Additionally, the [AllowAnonymous] attribute can be used to allow access to certain controllers or methods without authentication. However, it is crucial to ensure that such implementation does not introduce vulnerabilities to the system.
 - The chosen authentication and authorization models will define the level of access and actions that users can perform within the application.
 2. Sensitive Data
+- We will need to identify and protect sensitive data in your application. Azure provides components like Azure Storage and Azure Key Vault for storing and safeguarding such data. Azure Storage is a suitable option for data storage in the cloud.
+- Azure Key Vault, on the other hand, is specifically designed for protecting application secrets. If your application requires the storage and management of sensitive information, it is recommended to utilize Azure Key Vault to fulfill this requirement.
 3. Web Security
