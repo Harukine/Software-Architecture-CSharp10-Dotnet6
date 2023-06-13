@@ -5,7 +5,7 @@ Non-functional requirements play a crucial role in the architectural design of a
 - Scalability is not solely dependent on hardware solutions; it also relies on well-architected software that can save costs. The running costs of a system should be considered when making architectural decisions. In cloud computing, resiliency is crucial due to potential system failures and the need to recover without affecting the end user. Working with multiple systems and dealing with transient errors necessitates a focus on resiliency Achieving high availability in a system is possible through scalable and resilient solutions. 
 
 ## Performance issues that need to be considered when programming in C#
-[Performance Example Project](/performance-issues)
+[Performance Example Project](performance-issues)
 1. String concatenation
 - The performance issues that can arise from naive string concatenation using the + operator. Each concatenation operation involves copying the contents of the strings into a new string, resulting in increased cost. The overall cost grows exponentially with the number of strings and their average length. While this may not be a concern for small numbers of strings, it becomes problematic for larger quantities. To address this, the StringBuilder class is introduced as an alternative. By queuing the pointers of the strings and copying them only once when calling sb.ToString(), the StringBuilder-based concatenation offers improved performance, growing linearly with the number of strings and their average length. It is important to be mindful of such concatenation scenarios in code, especially in systems handling multiple simultaneous requests, to avoid performance bottlenecks that can impact non-functional requirements.
 2. Exceptions
