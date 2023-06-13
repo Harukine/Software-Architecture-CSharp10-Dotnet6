@@ -90,5 +90,10 @@ ASP.NET Core offers features to help protect applications, including authenticat
 
 ## List of practices for achieving a safe architecture
 1. Authentication
+- When designing a web application, it is important to consider the authentication method. There are various options available, such as ASP.NET Core Identity or external provider authentication methods like Facebook or Google. As a software architect, it is crucial to understand the target audience of the application and consider using Azure Active Directory (Azure AD) as a starting point, especially for internal usage.
+- Azure AD can be integrated for managing the company's Active Directory. It offers options for B2B (Business to Business) or B2C (Business to Consumer) scenarios. In some cases, implementing Multi-Factor Authentication (MFA) might be necessary, which requires multiple forms of proof of identity. Azure AD provides support for MFA implementation.
+- For the APIs provided by the web app, it is essential to determine an authentication method. JSON Web Token (JWT) is a recommended cross-platform pattern for this purpose.
+- Regarding authorization, there are four model options to consider: simple, role-based, claims-based, and policy-based. The choice of model determines the access and permissions for each user. Additionally, the [AllowAnonymous] attribute can be used to allow access to certain controllers or methods without authentication. However, it is crucial to ensure that such implementation does not introduce vulnerabilities to the system.
+- The chosen authentication and authorization models will define the level of access and actions that users can perform within the application.
 2. Sensitive Data
 3. Web Security
