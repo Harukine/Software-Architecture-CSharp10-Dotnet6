@@ -39,4 +39,8 @@ Implement efficient selection logic to make it easy for users to select from a l
 - Implementing these selection logic techniques can enhance the user experience and facilitate efficient and accurate selection in user interfaces.
 [Levenshtein Smart Search Example Project](smart-search)
 
-
+## Selecting from a huge number of items
+- When dealing with a large number of items (more than 10,000-100,000), it becomes challenging for users to remember the specific details of each item. In such cases, selecting the right item requires a hierarchical approach.
+Cascading drop-down menus are a common solution for navigating through a hierarchy of categories. Each selection is performed through a series of input fields, where the options in each subsequent field depend on the values selected in the previous fields. For example, selecting a town from around the world can involve selecting the country first and then populating the next drop-down menu with towns from the chosen country.
+In cases where multiple hierarchies need to be intersected to make the right selection, cascading drop-down menus may become inefficient. In such situations, a filter form can be used to facilitate the selection process.
+Overall, when dealing with a large number of items, hierarchical navigation and filtering techniques can help users find and select the desired item effectively.
