@@ -27,3 +27,17 @@ Fast UIs can be achieved by addressing three key requirements:
 - Order input fields based on the usual filling sequence, allowing users to navigate using the Tab or Enter key. Place fields that are often left empty at the bottom to minimize mouse usage and reduce user gestures.
 System reactions to user inputs should be immediate. Error or information messages should appear as soon as the user leaves an input field. Move help and input validation logic to the client side to minimize delays caused by server communication.
 Implement efficient selection logic to make it easy for users to select from a large number of options. Complex selection tasks should be simplified, allowing users to make selections with minimal effort and without requiring precise knowledge of product names or barcodes.
+
+## Designing fast selection logic
+- When designing selection logic for user interfaces, the approach can vary based on the number and complexity of options. Here are some considerations:
+
+- For a small number of choices (1-50), a simple drop-down menu is sufficient.
+- When the number of options is higher but still within a few thousand, an autocomplete feature that displays items starting with the typed characters is recommended.
+- Complex search patterns are required for descriptions composed of multiple words. Full-text search support in the database can efficiently search for words typed by the user within descriptions.
+- When dealing with descriptions consisting of names or complex strings, algorithms like the Levenshtein algorithm can be used to find the best match for the user's input. These algorithms compare the typed string with the descriptions and calculate a penalty based on missing characters and the distance between character occurrences.
+- The descriptions are ranked based on the number of occurrences of typed characters and the penalty calculated. Sorting is done first by the number of occurrences and then by the lowest penalties.
+- Implementing these selection logic techniques can enhance the user experience and facilitate efficient and accurate selection in user interfaces.
+
+
+
+
