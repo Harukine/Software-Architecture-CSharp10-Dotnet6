@@ -27,3 +27,11 @@ process.
 
 ### Feature work items
 - Feature work items in Azure DevOps serve as a place to document user requirements and define the functionality needed for a specific feature or aspect of the system. While Epic work items encapsulate multiple subsystems and span across multiple iterations, Feature work items are typically implemented within a few sprints and are part of a single Epic work item. The difference between Epics and Features lies in their roles and the goals they aim to achieve. Both work item types can contain the same information, such as state, acceptance criteria, start date, target date, priority, and effort estimate. Additionally, all work items have sections for team discussions and the ability to link and attach various information.
+
+### Product Backlog/User Story work items
+- Product Backlog items and User Story work items in Azure DevOps serve the same purpose of capturing detailed requirements for features. The availability of these work items depends on the selected work item process. They are connected to parent Feature work items and specify the requirements for individual functionalities within those features. For example, in a Feature work item for system access control, the maintenance of users and the login interface could be two separate User Stories/Product Backlog items.
+- In addition to Product Backlog items/User Story work items, there are two other types of work items commonly associated with them:
+
+1. Tasks: These work items describe the specific job that needs to be done to fulfill the requirements stated in the parent Product Backlog/User Story work item. Tasks can include time estimates to help with capacity management and scheduling for the team.
+
+2. Test cases: These items outline how to test the functionality described by the requirements. The number of tasks and test cases created for each Product Backlog/User Story work item may vary depending on the development and testing scenario being used.
