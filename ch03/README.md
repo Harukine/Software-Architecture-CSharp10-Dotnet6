@@ -35,3 +35,6 @@ process.
 1. Tasks: These work items describe the specific job that needs to be done to fulfill the requirements stated in the parent Product Backlog/User Story work item. Tasks can include time estimates to help with capacity management and scheduling for the team.
 
 2. Test cases: These items outline how to test the functionality described by the requirements. The number of tasks and test cases created for each Product Backlog/User Story work item may vary depending on the development and testing scenario being used.
+
+## Summary
+- In this chapter, the process of creating an Azure DevOps account for a software development project was discussed, along with an overview of its functionalities. The chapter provided detailed guidance on managing system requirements and organizing work using different types of work items. It also covered the planning and organization of sprints to deliver comprehensive solutions with multiple features. Overall, the chapter served as a comprehensive guide to getting started with Azure DevOps and effectively managing software development projects.
