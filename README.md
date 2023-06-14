@@ -4,3 +4,5 @@
 ## [2 Non-Functional Requirements](/ch02/README.md)
 
 ## [3 Documenting Requirements with Azure Devops](/ch03/README.md)
+
+## [4 Deciding on the Cloud-Based Solution](/ch04/README.md)
