@@ -24,3 +24,6 @@ process.
 
 ### Epic work items
 - Epic work items are used to encapsulate multiple subsystems or features that span across several development iterations. Epics serve as an umbrella for these features and provide a high-level view of the project. Within an Epic work item, you can define its state, acceptance criteria, start date, target date, priority, and effort estimate. This detailed information helps stakeholders to track and understand the development process at a macro level.
+
+### Feature work items
+- Feature work items in Azure DevOps serve as a place to document user requirements and define the functionality needed for a specific feature or aspect of the system. While Epic work items encapsulate multiple subsystems and span across multiple iterations, Feature work items are typically implemented within a few sprints and are part of a single Epic work item. The difference between Epics and Features lies in their roles and the goals they aim to achieve. Both work item types can contain the same information, such as state, acceptance criteria, start date, target date, priority, and effort estimate. Additionally, all work items have sections for team discussions and the ability to link and attach various information.
