@@ -6,3 +6,7 @@
 ## Organizing your work using Azure DevOps
 - Azure DevOps as a philosophy centered around delivering value to customers. It combines people, processes, and products, leveraging the Continuous Integration and Continuous Deployment (CI/CD) methodology to continuously improve software applications throughout their development and production lifecycle. Azure DevOps serves as a versatile tool that encompasses all stages, from initial development to the CI/CD process. Azure DevOps contains tools for collecting requirements and for organizing the whole development
 process.
+
+## Azure DevOps Repository
+- The Repos menu item gives you access to a default Git repository where you can place your project’s
+
