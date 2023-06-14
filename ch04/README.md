@@ -11,3 +11,8 @@
 - When using an Infrastructure as a Service (IaaS) platform, it's important to understand that the responsibility for security is shared between the cloud provider and the user. Contrary to popular belief, the cloud provider does not handle all aspects of security. The user is still responsible for securing the operating system and the application layers. This means that you need to implement security measures and best practices to protect your system, which can increase the overall cost.
 [![Platforms](images/platforms.png)](images/platforms.png)
 - IaaS is a suitable choice if you want to migrate an existing on-premises infrastructure to the cloud while maintaining scalability. Azure offers tools and services that facilitate this transition. However, if you're starting a new application development project, it's advisable to consider other options available in Azure beyond IaaS.
+
+### PaaS - a world of opportunities for developers
+- Platform as a Service (PaaS) offers developers a world of opportunities by providing a high-speed environment for software development. With PaaS, developers can focus on their data and applications while leaving security configurations to the platform. This allows for faster delivery of richer solutions, and the time-to-market can justify the cost of using PaaS.
+- While PaaS provides advantages, it's important to note that you may have limited control over the operating system and may not be able to connect to it in certain situations. 
+- Some common PaaS components in Microsoft Azure are Azure Web Apps, Azure SQL Server, and Azure Cognitive Services. These components demonstrate the power and versatility of development in the PaaS world.
