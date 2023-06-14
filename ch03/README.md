@@ -21,3 +21,6 @@ process.
 
 ## Managing system requirements in Azure DevOps
 - In Azure DevOps, system requirements can be managed through work items, which are units of information assigned to individuals. Work items are categorized into different types and include details such as development effort, status, and the iteration they belong to. Azure DevOps follows agile methodologies and organizes the development process into sprints or iterations. The available work item types depend on the selected work item process, such as Agile or Scrum.
+
+### Epic work items
+- Epic work items are used to encapsulate multiple subsystems or features that span across several development iterations. Epics serve as an umbrella for these features and provide a high-level view of the project. Within an Epic work item, you can define its state, acceptance criteria, start date, target date, priority, and effort estimate. This detailed information helps stakeholders to track and understand the development process at a macro level.
