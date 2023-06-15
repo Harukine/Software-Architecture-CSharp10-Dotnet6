@@ -20,3 +20,8 @@
 #### Web apps
 - A web app is a Platform as a Service (PaaS) option that allows you to deploy various types of applications, including .NET, .NET Core, Java, PHP, Node.js, and Python. This option eliminates the need for setting up a structure or an IIS web server.
 - Web apps offer a plan option where you don't need to pay for usage, although there are some limitations, such as only supporting 32-bit apps and lacking scalability features. Despite these limitations, web apps can be a great choice for prototyping and testing purposes.
+
+#### SQL Databases
+- SQL databases in Azure provide the power of Microsoft SQL Server for storage and data processing without the need for a dedicated server. Azure takes care of database backups, allowing you to focus on your core business needs and achieve a fast time-to-market.
+- Creating a SQL database in Azure is straightforward, but attention should be paid to server creation and pricing. The database depends on a SQL server, which provides the necessary parameters for accessing the database using tools like Visual Studio and SQL Server Management Studio. Security features such as Transparent Data Encryption and IP firewalls are available.
+- Choosing the appropriate pricing tier is important as there are different options to optimize costs based on your specific scenario. Once the configuration is complete, connecting to the server database is similar to on-premises SQL servers, with the Azure SQL Server firewall providing additional security.
