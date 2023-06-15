@@ -1,2 +1,5 @@
 # 5 Applying a Microservice Architecture to Your Enterprise Application
 - This chapter focuses on highly scalable architectures using microservices, which are small modules that enable fine-grained scaling and independent evolution. The chapter covers the concept of microservices, their benefits, how .NET handles them, and the necessary tools for managing microservices. By the end of the chapter, you will have gained knowledge on implementing a microservice in .NET.
+
+## What are microservices?
+- Microservice architectures provide independent scalability of modules, reducing resource waste and overall cost. They enable the development, maintenance, and deployment of software modules independently. This improves the CI/CD cycle by allowing scaling on different hardware, eliminating compatibility constraints, simplifying job organization, utilizing appropriate technologies, matching developers' competencies, and integrating legacy subsystems with newer ones. The section also discusses the origins of microservices and their design principles, including the use of Docker containers.
