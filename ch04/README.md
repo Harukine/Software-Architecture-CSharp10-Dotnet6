@@ -36,3 +36,9 @@
 
 ### Understanding what serverless means
 - A serverless solution is characterized by its focus on code execution rather than the specific server it runs on. While there is always a server involved, in a serverless architecture, developers are unaware and unconcerned about the underlying server infrastructure. Serverless solutions offer a fast, simple, and agile application life cycle due to their stateless and loosely coupled nature. This approach is often referred to as Function as a Service (FaaS). With serverless, developers can prioritize their application's business logic without worrying about server management or scalability. The emphasis is on rapid development and delivering excellent customer experiences.
+
+### Why are hybrid applications so useful in many cases?
+- Hybrid applications are valuable in many cases because they allow for different architectural choices in different parts of the solution. In the context of the cloud, hybrid refers to combining cloud and on-premises subsystems, but it can also involve mixing web and device-specific subsystems. Hybrid applications are a practical way to leverage the opportunities provided by the cloud in projects.
+When transitioning from on-premises to cloud architecture, there are often concerns related to cost, security, and service availability.
+- While these concerns have some validity, as a software architect, it is essential to address them and make informed decisions. In critical systems, it may be necessary to determine whether to move everything to the cloud or to keep certain components on the edge for reduced response times and bandwidth usage.
+- Mobile solutions are a classic example of hybrid applications, combining web-based and device-based architectures to enhance the user experience. While responsive websites can replace mobile applications in some scenarios, they may not always meet the interface quality and performance requirements of end users.
