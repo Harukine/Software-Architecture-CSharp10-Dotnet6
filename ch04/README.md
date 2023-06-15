@@ -28,3 +28,5 @@
 
 #### Azure Cognitive Services
 - Azure Cognitive Services is a valuable resource for incorporating Artificial Intelligence (AI) into software architecture. It emphasizes the convenience of leveraging pre-existing AI services instead of developing AI solutions from scratch. Azure Cognitive Services offers a range of APIs for vision, knowledge, speech, search, and language applications, some of which require training. The advantage of using PaaS, in this case, is that it eliminates the need for extensive preparation and allows software architects to focus on solving business problems rather than infrastructure management.
+
+[Example Cognitive service](cognitive-service)
