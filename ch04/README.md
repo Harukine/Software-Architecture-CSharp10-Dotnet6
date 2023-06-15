@@ -30,3 +30,6 @@
 - Azure Cognitive Services is a valuable resource for incorporating Artificial Intelligence (AI) into software architecture. It emphasizes the convenience of leveraging pre-existing AI services instead of developing AI solutions from scratch. Azure Cognitive Services offers a range of APIs for vision, knowledge, speech, search, and language applications, some of which require training. The advantage of using PaaS, in this case, is that it eliminates the need for extensive preparation and allows software architects to focus on solving business problems rather than infrastructure management.
 
 [Example Cognitive service](cognitive-service)
+
+### SaaS - just sign in and get started!
+- SaaS (Software as a Service) is a user-friendly option for accessing cloud-based services. Providers offer various solutions that address common company needs, allowing users to easily sign in and get started. Office 365 is an example of a SaaS platform where application maintenance is taken care of, enabling teams to focus on core business development. Azure DevOps is another notable SaaS platform that eliminates the need for server installation and configuration, streamlining application life cycle management. The simplicity of SaaS solutions like Azure DevOps has simplified tasks previously associated with server setup and maintenance.
