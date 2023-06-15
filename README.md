@@ -6,3 +6,5 @@
 ## [3 Documenting Requirements with Azure Devops](/ch03/README.md)
 
 ## [4 Deciding on the Cloud-Based Solution](/ch04/README.md)
+
+## [5 Applying a Microservice Architecture to Your Enterprise Application](/ch05/README.md)
