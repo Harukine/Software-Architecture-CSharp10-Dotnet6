@@ -16,3 +16,7 @@
 - Platform as a Service (PaaS) offers developers a world of opportunities by providing a high-speed environment for software development. With PaaS, developers can focus on their data and applications while leaving security configurations to the platform. This allows for faster delivery of richer solutions, and the time-to-market can justify the cost of using PaaS.
 - While PaaS provides advantages, it's important to note that you may have limited control over the operating system and may not be able to connect to it in certain situations. 
 - Some common PaaS components in Microsoft Azure are Azure Web Apps, Azure SQL Server, and Azure Cognitive Services. These components demonstrate the power and versatility of development in the PaaS world.
+
+#### Web apps
+- A web app is a Platform as a Service (PaaS) option that allows you to deploy various types of applications, including .NET, .NET Core, Java, PHP, Node.js, and Python. This option eliminates the need for setting up a structure or an IIS web server.
+- Web apps offer a plan option where you don't need to pay for usage, although there are some limitations, such as only supporting 32-bit apps and lacking scalability features. Despite these limitations, web apps can be a great choice for prototyping and testing purposes.
