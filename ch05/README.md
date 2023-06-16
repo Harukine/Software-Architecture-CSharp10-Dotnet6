@@ -9,3 +9,6 @@
 
 ### Microservices design principles
 - The microservice architecture is an extension of SOA that emphasizes independence and fine-grained scaling. Understanding the benefits of microservice independence and scaling, we can now explore the design principles that stem from these constraints. Each principle will be discussed in its own subsection.
+
+#### The independence of design choices
+- The principle of independence of design choices in microservices ensures that each microservice can have its own independent design and implementation decisions. This allows for flexibility in choosing the most suitable technologies for each microservice. Additionally, microservices should not share the same storage, as this would entail sharing design choices and structure. Instead, microservices can have dedicated data storage, either by having exclusive access to a separate database or by implementing a logical microservice split into multiple physical microservices for better load balancing.
