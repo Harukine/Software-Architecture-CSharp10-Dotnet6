@@ -12,3 +12,6 @@
 
 #### The independence of design choices
 - The principle of independence of design choices in microservices ensures that each microservice can have its own independent design and implementation decisions. This allows for flexibility in choosing the most suitable technologies for each microservice. Additionally, microservices should not share the same storage, as this would entail sharing design choices and structure. Instead, microservices can have dedicated data storage, either by having exclusive access to a separate database or by implementing a logical microservice split into multiple physical microservices for better load balancing.
+
+#### Independence from the deployment environment
+- Microservices should be independent from the deployment environment. They should not rely heavily on services provided by the operating system or other installed software. By being less dependent on the environment, microservices can be deployed on a wider range of hardware nodes and allow for better optimization. This is why microservices are often containerized using technologies like Docker. Containerization enables each microservice to package its dependencies, making it portable and capable of running anywhere.
