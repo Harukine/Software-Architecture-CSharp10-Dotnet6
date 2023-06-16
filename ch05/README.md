@@ -24,3 +24,7 @@
 
 ### Containers and Docker
 - Containers and Docker provide a solution for deploying microservices that are independent of the hosting environment. Containers are a lightweight form of virtual machines that virtualize the OS filesystem level without the overhead of starting a whole OS for each instance. Docker is a popular container image format and runtime that allows the creation of isolated environments for containers. Images are built by layering new files and configuration information on top of existing images, and they can be grouped into public or private registries. Docker Compose is a tool used to specify the deployment of multiple images and how their internal resources are mapped to the host machine's resources. Containerized microservices are often deployed and load-balanced on clusters managed by orchestrators. Understanding microservices, their advantages, and design principles allows us to determine when and how to use them in our system architecture.
+
+## When do microservices help?
+1. Layered architectures and microservices
+2. When is it worth considering microservice architectures?
