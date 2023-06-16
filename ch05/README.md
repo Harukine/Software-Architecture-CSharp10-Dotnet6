@@ -28,3 +28,6 @@
 ## When do microservices help?
 1. Layered architectures and microservices
 2. When is it worth considering microservice architectures?
+
+### Layered architectures and microservices
+- Layered architectures are commonly used in enterprise systems, with different layers responsible for specific functionalities and data processing. Each layer interacts with the layer above and below it, ensuring independence and modularity. Microservices can be integrated into a layered architecture, spanning across different layers depending on their functionalities. Some microservices may exist in the business layer, some in the data layer, and there can also be microservices that span both layers. However, the relationship between microservices and the presentation layer is not explicitly discussed in the given text.
