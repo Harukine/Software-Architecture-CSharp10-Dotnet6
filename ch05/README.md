@@ -15,3 +15,6 @@
 
 #### Independence from the deployment environment
 - Microservices should be independent from the deployment environment. They should not rely heavily on services provided by the operating system or other installed software. By being less dependent on the environment, microservices can be deployed on a wider range of hardware nodes and allow for better optimization. This is why microservices are often containerized using technologies like Docker. Containerization enables each microservice to package its dependencies, making it portable and capable of running anywhere.
+
+#### Loose coupling
+- The principle of loose coupling in microservices involves two aspects. Firstly, the interface exposed by each microservice should be general rather than specific, following object-oriented programming principles. Secondly, the communication among microservices should be minimized to reduce costs. Since microservices run on different hardware nodes and do not share the same address space, minimizing communication helps maintain loose coupling and improves overall system efficiency.
