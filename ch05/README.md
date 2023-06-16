@@ -6,3 +6,6 @@
 
 ### Microservices and the evolution of the concept of modules
 - Microservices represent an evolution in the concept of deployment modularity, building upon the foundations of code modularity. They emerged as a response to the limitations of DLL-based modularity and the challenges of version compatibility. The progression from monolithic executables to static libraries, dynamic link libraries (DLLs), and then to platforms like .NET and Java facilitated deployment on different hardware and operating systems. However, the inability to handle different versions of shared dependencies led to the adoption of package management systems and Service-Oriented Architecture (SOA), where deployment units were implemented as web services. Microservices, as an evolution of SOA, enhance scalability and modularity, improving the CI/CD cycle. They are considered a refined implementation of SOA with additional features and constraints.
+
+### Microservices design principles
+- The microservice architecture is an extension of SOA that emphasizes independence and fine-grained scaling. Understanding the benefits of microservice independence and scaling, we can now explore the design principles that stem from these constraints. Each principle will be discussed in its own subsection.
