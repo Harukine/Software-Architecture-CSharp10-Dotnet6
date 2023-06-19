@@ -57,3 +57,4 @@
 - Enabling Docker Compose in Visual Studio allows for the configuration of Docker Compose files, which can run and deploy multiple Docker images simultaneously. By adding another MVC project with container orchestrator support, the new Docker image will be included in the same Docker Compose file.
 - Once Docker Compose is enabled and the Docker runtime is properly installed and running, the Docker image can be executed directly from Visual Studio.
 
+[Example MVC Docker](MvcDockerTest)
