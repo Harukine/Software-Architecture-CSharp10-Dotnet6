@@ -64,4 +64,5 @@
 - The second step starts from the ASP.NET SDK image and creates a separate image for building application-specific files. It sets the working directory, copies the project file, restores NuGet packages, copies the entire project file tree, builds the project in release mode, and publishes the binaries.
 - The final step starts from the base image created in the first step (containing the ASP.NET runtime) and adds the published files from the previous step. The working directory is set, and the entry point command is specified as "dotnet MvcDockerTest.dll".
 - Overall, the Dockerfile creates an image that includes the necessary runtime and application-specific files, allowing the application to be executed within a Docker container.
+
 [Example Dockerfile](MvcDockerTest/MvcDockerTest/Dockerfile)
