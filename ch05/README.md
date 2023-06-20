@@ -66,3 +66,10 @@
 - Overall, the Dockerfile creates an image that includes the necessary runtime and application-specific files, allowing the application to be executed within a Docker container.
 
 [Example Dockerfile](MvcDockerTest/MvcDockerTest/Dockerfile)
+
+#### Publishing the project
+- When publishing the project, there are options to publish the image to an existing or new web app created by Visual Studio, or to publish to Docker registries, including a private Azure Container Registry that can be created within Visual Studio. Docker Compose support allows running and publishing a multi-container application with additional images, such as a containerized database.
+- The Docker Compose file provided in the example includes two ASP.NET applications within the same Docker image. It references existing Docker files and includes environment-dependent information in the docker-compose.override.yml file, which is merged with the docker-compose.yml file when launching the application from Visual Studio.
+- The docker-compose.override.yml file specifies environment variables, port mappings, and host file mappings. The volumes are used to map the self-signed HTTPS certificate used by Visual Studio.
+- To add a containerized SQL Server instance, additional instructions split between docker-compose.yml and docker-compose.override.yml are needed. These instructions specify the properties of the SQL Server container, including configuration, installation parameters, environment variables, and port mappings.
+- It is possible to add further docker-compose-xxx.override.yml files for different environments (e.g., staging, production) and launch them manually in the target environment using the docker-compose command.
