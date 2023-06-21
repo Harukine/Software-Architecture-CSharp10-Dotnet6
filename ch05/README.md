@@ -73,3 +73,7 @@
 - The docker-compose.override.yml file specifies environment variables, port mappings, and host file mappings. The volumes are used to map the self-signed HTTPS certificate used by Visual Studio.
 - To add a containerized SQL Server instance, additional instructions split between docker-compose.yml and docker-compose.override.yml are needed. These instructions specify the properties of the SQL Server container, including configuration, installation parameters, environment variables, and port mappings.
 - It is possible to add further docker-compose-xxx.override.yml files for different environments (e.g., staging, production) and launch them manually in the target environment using the docker-compose command.
+
+### Azure and Visual Studio support for microservice orchestration
+- Azure and Visual Studio provide support for microservice orchestration. Visual Studio offers project templates for defining microservices to be deployed in Azure Kubernetes and extensions for debugging a single microservice while it interacts with other microservices deployed in Azure Kubernetes.
+- Additionally, there are tools available for testing and debugging multiple communicating microservices on the development machine without the need to install Kubernetes software. These tools also facilitate the automatic deployment of microservices on Azure Kubernetes with minimal configuration requirements.
