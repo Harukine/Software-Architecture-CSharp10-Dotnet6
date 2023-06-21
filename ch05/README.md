@@ -107,3 +107,8 @@
 9. Optionally, you can specify a version when tagging and pushing the image.
 10. You can remove the image from your local computer using `docker rmi myregistry.azurecr.io/testpath/myimage`.
 - By following these steps, you can define and use your private Docker registry in Azure to manage and publish your Docker images.
+
+## Summary
+- we discussed the concept of microservices and their evolution from modules. We explored the benefits of using microservices and the criteria for designing them. We also examined the relationship between microservices and Docker containers.
+Moving into implementation, we explored the tools available in .NET for building microservice architectures. We discussed the necessary infrastructure for microservices and how Azure provides container registries and orchestrators.
+Overall, provided an overview of microservices, their advantages, and practical considerations for implementing them using .NET tools and Azure infrastructure.
