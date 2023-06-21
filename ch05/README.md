@@ -85,3 +85,25 @@
 3. Logging and Analytics: The orchestrator should provide logging capabilities to track and analyze the behavior of microservices. It should also offer features for presenting analytics, enabling insights into the performance and behavior of the microservices.
 4. Dynamic Configuration: The orchestrator should allow designers to dynamically change requirements, such as adjusting the allocation of hardware nodes to a cluster or scaling the number of service instances. This flexibility enables adaptation to changing demands and optimizes resource utilization.
 - By leveraging a private Docker image registry and a robust microservice orchestrator, organizations can effectively manage their microservices throughout the development lifecycle, ensuring scalability, reliability, and operational efficiency.
+
+### Defining your private Docker registry in Azure
+- To define your private Docker registry in Azure, follow these steps:
+1. In the Azure portal, search for "Container registries" and select it from the results.
+2. Click on the "Create" button to start creating a new registry.
+3. Fill in the required information, such as the name of the registry, subscription, resource group, and location.
+4. Choose the appropriate SKU from the dropdown, considering performance and available memory options.
+5. Once the registry is created, the registry URI will be in the format \<name\>.azurecr.io.
+6. When referencing image names in Docker commands or Visual Studio, prefix them with the registry URI, such as \<name\>.azurecr.io/\<my imagename\>.
+
+- To publish images to your Azure registry:
+1. If using Visual Studio, follow the instructions that appear after publishing the project.
+2. If not using Visual Studio, use Docker commands to push the images into your registry.
+3. Install the Azure CLI on your computer from https://aka.ms/installazurecliwindows.
+4. Log in to your Azure account using the command `az login`.
+5. Once logged in, log in to your private registry using the command `az acr login --name {registryname}`.
+6. Pull the Docker image from another registry to your local computer using `docker pull other.registry.io/samples/myimage`.
+7. Tag the image with the desired path in the Azure registry using `docker tag myimage myregistry.azurecr.io/testpath/myimage`.
+8. Push the tagged image to your Azure registry using `docker push myregistry.azurecr.io/testpath/myimage`.
+9. Optionally, you can specify a version when tagging and pushing the image.
+10. You can remove the image from your local computer using `docker rmi myregistry.azurecr.io/testpath/myimage`.
+- By following these steps, you can define and use your private Docker registry in Azure to manage and publish your Docker images.
