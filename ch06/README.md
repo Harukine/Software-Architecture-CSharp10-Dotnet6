@@ -12,3 +12,14 @@
 - A Deployment includes a name, the desired number of replicas, a selector to choose the pods to monitor, and a template for creating pod replicas. The template specifies the metadata and specifications for the pod, including labels, container details (name, Docker image, resource requirements, ports, environment variables), and additional fields for virtual files and container readiness/health.
 - Namespaces can be used to separate objects within a Kubernetes cluster, allowing independent applications to coexist. The optional namespace field can be included in a Deployment to specify the namespace for the objects.
 - Overall, Deployments offer a higher-level abstraction for managing ReplicaSets and pods, providing robustness and scalability to Kubernetes applications.
+
+### StatefulSets
+- StatefulSets in Kubernetes are similar to ReplicaSets but with some key differences. While ReplicaSets consist of indistinguishable pods that contribute in parallel to a workload, StatefulSets are designed for storing information and require unique identities for each pod instance.
+- StatefulSets maintain a unique identity for each pod and are responsible for sharding information rather than parallel processing. Each pod instance is associated with a specific virtual disk space, and ordinal numbers are assigned to the pod instances. The pod instances start and stop in sequence based on these ordinal numbers, with instance names formed by combining the pod name and instance ordinal.
+- A typical StatefulSet definition includes the name, selector, replicas, and template sections, similar to Deployments. The significant difference is the addition of the serviceName field, which specifies the name of a service that provides unique network addresses for all pod instances. Storage is commonly used with StatefulSets.
+- By default, StatefulSets follow an ordered creation and stop strategy, but this can be changed by specifying an explicit value for the podManagementPolicy property.
+- Stable network addresses for both ReplicaSets and StatefulSets are covered in the subsequent subsection.
+
+
+
+
