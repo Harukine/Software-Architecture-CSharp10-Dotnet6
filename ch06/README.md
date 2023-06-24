@@ -6,3 +6,9 @@
 
 ### .yaml files
 - .yaml files are used to describe nested objects and collections in a human-readable format. They have a different syntax than JSON files, using indentation for nested objects and hyphens for list items. Multiple sections can be included in a .yaml file, each defining a different entity. Sections are separated by "---" and comments are indicated by "#" symbols. Each section starts with the declaration of the Kubernetes API group and version, specifying the API name for objects belonging to different API groups.
+
+### ReplicaSets and Deployments
+- The ReplicaSet is a fundamental component in Kubernetes applications, representing a replicated set of pods. However, Deployments are commonly used to create and monitor ReplicaSets, ensuring a constant number of replicas despite hardware faults or other events. Deployments provide a declarative way to define ReplicaSets and pods.
+- A Deployment includes a name, the desired number of replicas, a selector to choose the pods to monitor, and a template for creating pod replicas. The template specifies the metadata and specifications for the pod, including labels, container details (name, Docker image, resource requirements, ports, environment variables), and additional fields for virtual files and container readiness/health.
+- Namespaces can be used to separate objects within a Kubernetes cluster, allowing independent applications to coexist. The optional namespace field can be included in a Deployment to specify the namespace for the objects.
+- Overall, Deployments offer a higher-level abstraction for managing ReplicaSets and pods, providing robustness and scalability to Kubernetes applications.
