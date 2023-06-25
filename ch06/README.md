@@ -20,6 +20,9 @@
 - By default, StatefulSets follow an ordered creation and stop strategy, but this can be changed by specifying an explicit value for the podManagementPolicy property.
 - Stable network addresses for both ReplicaSets and StatefulSets are covered in the subsequent subsection.
 
-
-
-
+### Services
+- Services in Kubernetes are responsible for assigning unique and stable virtual addresses to ReplicaSets and StatefulSets, as well as load balancing the traffic among their instances. Services work at level 4 of the protocol stack, understanding protocols like TCP but not performing higher-level actions like HTTPS security.
+- ClusterIP services provide a unique internal IP address within the cluster and route traffic to the connected pod instances. They can't be accessed from outside the cluster. NodePort services expose pods to the outside world by opening a specific port on all cluster nodes and forwarding traffic to the associated ClusterIP service.
+- LoadBalancer services expose pods by utilizing a level 4 load balancer provided by the cloud provider. They can assign a dynamic public IP or a specific public IP specified by the developer. In AKS (Azure Kubernetes Service), the resource group and static domain name can also be specified for the load balancer.
+- For StatefulSets, headless services are used to provide a unique URL address for each pod instance without load balancing. The headless service has the clusterIP property set to "none".
+- Services primarily support low-level protocols, so Kubernetes introduces higher-level entities called Ingresses to handle more sophisticated protocols like HTTP.
