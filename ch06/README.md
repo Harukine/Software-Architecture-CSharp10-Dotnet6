@@ -27,7 +27,7 @@
 - For StatefulSets, headless services are used to provide a unique URL address for each pod instance without load balancing. The headless service has the clusterIP property set to "none".
 - Services primarily support low-level protocols, so Kubernetes introduces higher-level entities called Ingresses to handle more sophisticated protocols like HTTP.
 
-### Ingress
+### Ingresses
 - Ingresses in Kubernetes are designed to work with HTTP(S) and provide several services such as HTTPS termination, name-based virtual hosting, and load balancing. Ingresses rely on Ingress Controllers, which are custom Kubernetes objects installed in the cluster to handle the interface between Kubernetes and a web server.
 - HTTPS termination and name-based virtual hosting can be configured in the Ingress definition independently of the chosen Ingress Controller. The configuration for load balancing depends on the specific Ingress Controller and its settings, which can be passed through annotations in the Ingress metadata.
 - Name-based virtual hosting is defined in the Ingress definition's rules section, where each rule specifies an optional hostname with an optional wildcard. Multiple paths can be specified for each rule, redirecting to different service/port pairs.
