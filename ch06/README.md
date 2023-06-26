@@ -26,3 +26,11 @@
 - LoadBalancer services expose pods by utilizing a level 4 load balancer provided by the cloud provider. They can assign a dynamic public IP or a specific public IP specified by the developer. In AKS (Azure Kubernetes Service), the resource group and static domain name can also be specified for the load balancer.
 - For StatefulSets, headless services are used to provide a unique URL address for each pod instance without load balancing. The headless service has the clusterIP property set to "none".
 - Services primarily support low-level protocols, so Kubernetes introduces higher-level entities called Ingresses to handle more sophisticated protocols like HTTP.
+
+### Ingress
+- Ingresses in Kubernetes are designed to work with HTTP(S) and provide several services such as HTTPS termination, name-based virtual hosting, and load balancing. Ingresses rely on Ingress Controllers, which are custom Kubernetes objects installed in the cluster to handle the interface between Kubernetes and a web server.
+- HTTPS termination and name-based virtual hosting can be configured in the Ingress definition independently of the chosen Ingress Controller. The configuration for load balancing depends on the specific Ingress Controller and its settings, which can be passed through annotations in the Ingress metadata.
+- Name-based virtual hosting is defined in the Ingress definition's rules section, where each rule specifies an optional hostname with an optional wildcard. Multiple paths can be specified for each rule, redirecting to different service/port pairs.
+- HTTPS termination for specific hostnames is achieved by associating the hostname with a certificate encoded in a Kubernetes secret. Certificates can be obtained from certificate authorities like Let's Encrypt, and they can be automatically installed and renewed using a certificate manager.
+- The Ingress definition includes TLS configuration, rules for name-based virtual hosting, and other optional metadata.
+- Ingresses provide a way to manage HTTP(S) traffic and routing within a Kubernetes cluster by leveraging Ingress Controllers and web server integration.
