@@ -34,3 +34,18 @@
 - HTTPS termination for specific hostnames is achieved by associating the hostname with a certificate encoded in a Kubernetes secret. Certificates can be obtained from certificate authorities like Let's Encrypt, and they can be automatically installed and renewed using a certificate manager.
 - The Ingress definition includes TLS configuration, rules for name-based virtual hosting, and other optional metadata.
 - Ingresses provide a way to manage HTTP(S) traffic and routing within a Kubernetes cluster by leveraging Ingress Controllers and web server integration.
+
+## Interacting with Azure Kubernetes clusters
+- To create an AKS (Azure Kubernetes Service) cluster in Azure, you can follow these steps:
+1. Search for "AKS" in the Azure search box and select "Kubernetes services."
+2. Click on the "Create" button to start creating a new AKS cluster.
+3. Fill in the required information, including subscription, resource group, and region.
+4. Choose a unique name for your Kubernetes cluster and select the desired version of Kubernetes.
+5. Specify the number of nodes and select a machine template (node size) for each node. For cost-saving purposes, you can choose a lower-cost virtual machine size.
+6. Set the scale method to "Manual" to prevent automatic scaling of nodes and avoid excessive Azure credit consumption.
+7. Optionally, you can configure availability zones for better fault tolerance by spreading nodes across multiple geographic zones. In this case, select two zones since you have two nodes.
+8. Review the chosen settings and click on the "Review + create" button.
+9. On the review page, confirm the settings and create the AKS cluster.
+10. Wait for the deployment process to complete, which may take around 10-20 minutes.
+- Once the cluster is created, you will have your first Kubernetes cluster in Azure.
+- These steps guide you through the process of creating an AKS cluster in Azure, allowing you to leverage the power of Kubernetes for your applications.
