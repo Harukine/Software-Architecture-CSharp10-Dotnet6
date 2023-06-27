@@ -49,3 +49,26 @@
 10. Wait for the deployment process to complete, which may take around 10-20 minutes.
 - Once the cluster is created, you will have your first Kubernetes cluster in Azure.
 - These steps guide you through the process of creating an AKS cluster in Azure, allowing you to leverage the power of Kubernetes for your applications.
+
+### Using Kubectl
+- To interact with your AKS (Azure Kubernetes Service) cluster, you can use Azure Cloud Shell, which provides a Bash shell environment within the Azure portal. Alternatively, you can install Azure CLI on your local machine along with the necessary tools like kubectl and Helm. However, for simplicity, the instructions assume the use of Azure Cloud Shell.
+- Here are the steps to use kubectl, the command-line tool for Kubernetes, to interact with your cluster:
+1. Access Azure Cloud Shell by clicking on the console icon in the top right corner of the Azure portal page.
+2. Choose the Bash Shell when prompted and create a storage account if required.
+3. In Azure Cloud Shell, use the file icon at the top to upload your .yaml files containing Kubernetes configurations.
+4. To interact with your AKS cluster, you need to activate the cluster credentials. Run the following command in Azure Cloud Shell, replacing <resource group> and <cluster name> with your specific values:
+`az aks get-credentials --resource-group <resource group> --name <cluster name>`
+- This command retrieves the cluster credentials and stores them in a config file located in the /.kube directory, allowing you to authenticate with the cluster.
+5. Now you can use kubectl commands without further authentication. For example, running kubectl get nodes will display a list of all the Kubernetes nodes in your cluster.
+- `kubectl get <object type>` lists all objects of a given type, such as nodes, pods, or stateful sets.
+- `kubectl get all` shows a list of all objects created in your cluster.
+- `kubectl get <object type> <object name>` provides detailed information about a specific object.
+- Adding the --watch option to a kubectl get command continuously updates the object list, allowing you to observe the state changes over time. You can exit the watch mode by pressing Ctrl + C.
+6. The `kubectl describe <object name>` command provides a detailed report on a specific object.
+7. To create objects defined in a .yaml file, use the `kubectl create -f <filename.yaml>` command. For example, `kubectl create -f myClusterConfiguration.yaml`.
+8. If you make modifications to the .yaml file, you can apply those changes to the cluster using the `kubectl apply -f <filename.yaml>` command. This command updates the existing resources if they already exist, while create would return an error in such cases.
+9. To delete objects created from a .yaml file, use the `kubectl delete -f <filename.yaml>` command. It will remove all the objects defined in the file.
+10. Alternatively, you can specify specific objects to delete by passing the object type and a list of object names. For example, `kubectl delete deployment deployment1 deployment2...` will delete multiple deployments.
+11. These kubectl commands should cover most of your practical needs. For more detailed information, refer to the official documentation.
+
+- By following these steps, you can effectively use kubectl to interact with your AKS cluster and manage the Kubernetes resources within it.
