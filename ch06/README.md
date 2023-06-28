@@ -72,3 +72,19 @@
 11. These kubectl commands should cover most of your practical needs. For more detailed information, refer to the official documentation.
 
 - By following these steps, you can effectively use kubectl to interact with your AKS cluster and manage the Kubernetes resources within it.
+
+### Deploying the demo Guestbook application
+- To deploy the Guestbook application, which is a demo application used in the official Kubernetes documentation, follow these steps:
+1. The Guestbook application consists of a UI tier implemented with a Deployment and a database layer implemented with Redis. There are three .yaml files for the application, available in the associated GitHub repository.
+2. Upload the redis-master.yaml file to Azure Cloud Shell and deploy it to the cluster using the following command: `kubectl create -f redis-master.yaml`. This creates a Deployment with a single replica and a ClusterIP Service that exposes the Deployment on port 6379 at the internal network address `redis-master.default.svc.cluster.local`.
+3. Inspect the cluster content using `kubectl get all` to verify the successful deployment of the Redis master.
+4. Upload the redis-slave.yaml file and deploy it with two replicas by running the following command: `kubectl create -f redis-slave.yaml`. This creates the slave storage for Redis, similar to the previous step but with different Docker images.
+5. Upload the frontend.yaml file, which contains the code for the UI tier, and deploy it with the following command: `kubectl create -f frontend.yaml`. This creates a Deployment with three replicas and a LoadBalancer type Service that exposes the application on a public IP address.
+6. Use `kubectl get service` to retrieve the public IP address assigned to the LoadBalancer Service. The EXTERNAL-IP column in the output will show the IP address. If it shows <none>, repeat the command until the IP address is assigned.
+7. Access the application by navigating to the obtained IP address in your browser. You should see the home page of the Guestbook application.
+8. After experimenting with the application, remove it from the cluster to avoid unnecessary resource consumption and cost by executing the following commands:
+- `kubectl delete deployment frontend redis-master redis-slave`
+- `kubectl delete service frontend redis-master redis-slave`
+- This will delete the Deployments and Services associated with the Guestbook application.
+
+- By following these steps, you can deploy the Guestbook application on your Kubernetes cluster, access it through the assigned IP address, and clean up the resources w
