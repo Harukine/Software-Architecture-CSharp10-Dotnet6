@@ -87,4 +87,4 @@
 - `kubectl delete service frontend redis-master redis-slave`
 - This will delete the Deployments and Services associated with the Guestbook application.
 
-- By following these steps, you can deploy the Guestbook application on your Kubernetes cluster, access it through the assigned IP address, and clean up the resources w
+- By following these steps, you can deploy the Guestbook application on your Kubernetes cluster, access it through the assigned IP address, and clean up the resources when no longer needed to avoid unnecessary costs.
