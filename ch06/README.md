@@ -88,3 +88,10 @@
 - This will delete the Deployments and Services associated with the Guestbook application.
 
 - By following these steps, you can deploy the Guestbook application on your Kubernetes cluster, access it through the assigned IP address, and clean up the resources when no longer needed to avoid unnecessary costs.
+
+## Advanced Kubernetes Concepts
+- This section covers various important features of Kubernetes:
+1. Permanent storage for StatefulSets: Explains how to provide persistent storage to StatefulSets, which are used for applications requiring stable network identities and storage.
+2. Storing secrets securely: Covers the concept of Kubernetes secrets and how to store sensitive information like passwords and certificates.
+3. Container health monitoring: Describes how containers can communicate their health state to Kubernetes using probes, enabling Kubernetes to manage containers based on their health.
+4. Managing complex applications with Helm: Introduces Helm, a Kubernetes package manager that simplifies the deployment and management of intricate applications.
