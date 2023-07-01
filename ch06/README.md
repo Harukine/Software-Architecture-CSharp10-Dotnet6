@@ -95,3 +95,10 @@
 2. Storing secrets securely: Covers the concept of Kubernetes secrets and how to store sensitive information like passwords and certificates.
 3. Container health monitoring: Describes how containers can communicate their health state to Kubernetes using probes, enabling Kubernetes to manage containers based on their health.
 4. Managing complex applications with Helm: Introduces Helm, a Kubernetes package manager that simplifies the deployment and management of intricate applications.
+
+### Requiring permanent storage
+- When it comes to providing permanent storage for pods in Kubernetes, there are two options: using external databases or utilizing cloud storage. This section focuses on cloud storage as a more flexible and scalable solution.
+- Kubernetes introduces PersistentVolumeClaim (PVC), an abstraction of storage that allows pods to request and utilize persistent storage resources. In cloud-based Kubernetes clusters, dynamic allocation is typically used through the cloud provider's dynamic storage provisioner.
+- Cloud providers, like Azure, offer different storage classes with varying performance and costs. PVCs can specify the access mode as ReadWriteOnce, ReadOnlyMany, or ReadWriteMany, defining the allowed access to the volume by pods.
+- To incorporate permanent storage into StatefulSets, volumeClaimTemplates are added to the StatefulSet's specification, specifying the desired storage requirements and access mode. Each container within the StatefulSet must also specify the volume mount path to attach the permanent storage.
+- By leveraging cloud storage and PVCs, Kubernetes allows pods to have reliable and persistent storage, ensuring data availability and scalability.
