@@ -102,3 +102,12 @@
 - Cloud providers, like Azure, offer different storage classes with varying performance and costs. PVCs can specify the access mode as ReadWriteOnce, ReadOnlyMany, or ReadWriteMany, defining the allowed access to the volume by pods.
 - To incorporate permanent storage into StatefulSets, volumeClaimTemplates are added to the StatefulSet's specification, specifying the desired storage requirements and access mode. Each container within the StatefulSet must also specify the volume mount path to attach the permanent storage.
 - By leveraging cloud storage and PVCs, Kubernetes allows pods to have reliable and persistent storage, ensuring data availability and scalability.
+
+### Kubernetes secrets
+- Kubernetes provides a feature called secrets for securely storing sensitive information. Secrets are key-value pairs that can be encrypted to protect them. There are multiple ways to create secrets using the kubectl command.
+- Secrets can be created by specifying the values in files and using the --from-file flag, where the filenames become the keys and the file contents become the values. Alternatively, when the values are strings, they can be directly specified using the --from-literal flag, with keys and values listed one after the other.
+- Once secrets are defined, they can be referenced in the spec->volume property of a pod (Deployment or StatefulSet template). Each container within the pod can specify the mount path for the secrets using the spec->containers->volumeMounts property.
+- In addition to being mounted as files, secrets can also be passed as environment variables using the spec->containers->env object. This is useful for accessing secrets within applications.
+- Secrets can also be used to encode key/certificate pairs for HTTPS certificates. They can be created using the --key and --cert flags, and then referenced in the spec->tls->hosts->secretName properties of an Ingress to enable HTTPS termination.
+- By utilizing secrets, Kubernetes allows for secure storage and management of sensitive information such as passwords, connection strings, and certificates.
+
