@@ -117,3 +117,10 @@
 - Endpoint checks are similar, where an HTTP endpoint is specified, and the test is successful if the response contains the declared header with the expected value. Alternatively, a TCP socket check can be used by specifying the port.
 - Similar to liveness checks, containers can also have readiness checks to determine if they are ready to receive traffic. The readinessProbe is defined in the same way as the livenessProbe, but it is used to monitor the readiness of containers after they are deployed.
 - By implementing liveness and readiness checks, Kubernetes can take appropriate actions such as throttling, restarting containers, or restarting the entire pod instance on a different node when health or resource consumption conditions are violated.
+
+### Autoscaling
+- Autoscaling in Kubernetes allows for automatic adjustment of the number of replicas in a Deployment based on the resource consumption. By defining a HorizontalPodAutoscaler object, Kubernetes can dynamically scale the number of replicas to maintain a target resource consumption.
+- The HorizontalPodAutoscaler is defined with the target Deployment specified in the scaleTargetRef->name field. The minimum and maximum number of replicas can also be set using the minReplicas and maxReplicas fields.
+- The autoscaling behavior is determined by setting the target resource and its utilization percentage. In the example, the target resource is CPU, and the target average utilization is set to 25%.
+- When the average resource consumption of each replica exceeds the target utilization, Kubernetes creates a new replica. Conversely, if the average resource consumption falls below the target, a replica is destroyed.
+- Autoscaling can help maintain optimal resource utilization and handle fluctuations in load without manual intervention.
