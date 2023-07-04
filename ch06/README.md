@@ -124,3 +124,13 @@
 - The autoscaling behavior is determined by setting the target resource and its utilization percentage. In the example, the target resource is CPU, and the target average utilization is set to 25%.
 - When the average resource consumption of each replica exceeds the target utilization, Kubernetes creates a new replica. Conversely, if the average resource consumption falls below the target, a replica is destroyed.
 - Autoscaling can help maintain optimal resource utilization and handle fluctuations in load without manual intervention.
+
+### Helm - Installing an Ingress Controller
+- Helm is a tool that helps in organizing the installation of complex Kubernetes applications using Helm charts. Helm charts are sets of YAML files organized into folders and subfolders. They contain configuration files for the application and can include other Helm charts as helper libraries.
+- To install Helm charts, a remote repository needs to be added using the helm repo add command. Once added, packages from the remote repository can be installed using the helm install command, specifying the package name and the namespace.
+- Values in the Helm chart YAML files can be overridden during installation by providing a values.yaml file or using the --set option. The installation can also specify a specific version of the Helm chart.
+- Existing installations can be upgraded using the helm upgrade command, allowing for value overrides and version updates.
+- In the context of installing an Ingress Controller based on Nginx using Helm, the steps involve adding the remote repository, installing the Ingress Controller, configuring the Ingress resource, and deploying the application. It is also possible to configure HTTPS by obtaining a certificate and creating a secret for it.
+- Once the installation and configuration are complete, the application can be accessed using the assigned public IP or hostname.
+- To clean up the cluster, the installed resources can be deleted using the kubectl delete and helm delete commands.
+- Using Helm simplifies the installation and management of Kubernetes applications by providing a standardized approach and easy package management.
