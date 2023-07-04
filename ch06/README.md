@@ -111,3 +111,9 @@
 - Secrets can also be used to encode key/certificate pairs for HTTPS certificates. They can be created using the --key and --cert flags, and then referenced in the spec->tls->hosts->secretName properties of an Ingress to enable HTTPS termination.
 - By utilizing secrets, Kubernetes allows for secure storage and management of sensitive information such as passwords, connection strings, and certificates.
 
+### Liveness and readiness checks
+- Kubernetes monitors the health and resource consumption of containers to ensure they are functioning properly. Containers need to inform Kubernetes about their health status, which can be done in two ways: by declaring a console command that returns the health status or by specifying an endpoint that provides the same information.
+- The health status declaration is done in the spec->containers->livenessProbe object. For console command checks, a command is specified, and if it returns a 0 status, the container is considered healthy. The period between checks is defined by periodSeconds, and initialDelaySeconds allows for an initial delay before the first check.
+- Endpoint checks are similar, where an HTTP endpoint is specified, and the test is successful if the response contains the declared header with the expected value. Alternatively, a TCP socket check can be used by specifying the port.
+- Similar to liveness checks, containers can also have readiness checks to determine if they are ready to receive traffic. The readinessProbe is defined in the same way as the livenessProbe, but it is used to monitor the readiness of containers after they are deployed.
+- By implementing liveness and readiness checks, Kubernetes can take appropriate actions such as throttling, restarting containers, or restarting the entire pod instance on a different node when health or resource consumption conditions are violated.
