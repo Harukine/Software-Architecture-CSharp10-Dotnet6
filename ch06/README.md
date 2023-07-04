@@ -134,3 +134,9 @@
 - Once the installation and configuration are complete, the application can be accessed using the assigned public IP or hostname.
 - To clean up the cluster, the installed resources can be deleted using the kubectl delete and helm delete commands.
 - Using Helm simplifies the installation and management of Kubernetes applications by providing a standardized approach and easy package management.
+
+## Summary
+- In this chapter, we covered the fundamental concepts and objects of Kubernetes and demonstrated how to create an AKS cluster. We explored the process of deploying applications and monitoring the cluster using a sample application.
+- We delved into advanced Kubernetes features, such as providing persistent storage to containers, informing Kubernetes of container health status, and configuring advanced HTTP services like HTTPS and name-based virtual hosting.
+- Additionally, we discussed Helm, a tool for managing the installation of complex applications using Helm charts. We provided an overview of Helm and its commands for installing and managing applications.
+- By understanding these concepts and techniques, you are equipped to work with Kubernetes, deploy applications, and utilize advanced features to enhance your deployments.
