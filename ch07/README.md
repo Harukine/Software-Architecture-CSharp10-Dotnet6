@@ -8,3 +8,9 @@
 - Querying and updating data using Entity Framework Core is covered, with LINQ queries and lazy evaluation discussed. We see how updates, deletions, and additions to the database are performed through modifications to the in-memory collections representing the tables, followed by explicit synchronization with the database using methods like SaveChangesAsync().
 - Transactions play a crucial role in synchronization operations, with changes being executed within a single transaction. We conclude the chapter with a deeper understanding of how Entity Framework Core handles data interactions and synchronization with the database.
 
+## Configuring Entity Framework Core
+- We can configure Entity Framework Core by creating a separate class library project. Choose a .NET 6 library project and add the necessary dependencies, such as the Microsoft.EntityFrameworkCore.SqlServer package for SQL Server integration.
+- Rename the default Class1 class to MainDbContext and define it as a subclass of DbContext. The MainDbContext class requires the DbContextOptions in its constructor, which contains the necessary options for the database connection.
+- Inside the MainDbContext class, we will add properties for each collection that represents a mapped database table. The mapping configuration will be defined within the OnModelCreating method using the ModelBuilder object.
+- To continue the configuration, we create entity classes for each database table, which are referred to as entities. These entity classes are placed in the Models folder of the project.
+
