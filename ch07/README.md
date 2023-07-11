@@ -14,3 +14,8 @@
 - Inside the MainDbContext class, we will add properties for each collection that represents a mapped database table. The mapping configuration will be defined within the OnModelCreating method using the ModelBuilder object.
 - To continue the configuration, we create entity classes for each database table, which are referred to as entities. These entity classes are placed in the Models folder of the project.
 
+### Defining DB entities
+- Create an entity class called Destination to represent the rows of the location database table. The Destination class includes properties such as Id, Name, Country, and Description, which map to the corresponding DB fields. We apply attributes like MaxLength and Required to specify length limits and mandatory fields.
+- Since the Destination entity is connected to the Package entity through a one-to-many relationship, it includes a collection property called Packages to refer to the related packages. The Destination class is placed in the Models folder and is decorated with appropriate attributes.
+- Define the Package entity class, which represents the travel packages table. It includes properties such as Id, Name, Description, Price, DurationInDays, StartValidityDate, EndValidityDate, MyDestination, and DestinationId. We apply attributes to specify length limits and define the foreign key relationship with the Destination entity.
+- The DestinationId property acts as the external key for the one-to-many relationship between packages and destinations. By explicitly representing the foreign key, we can simplify update operations and queries.
