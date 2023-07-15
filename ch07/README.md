@@ -19,3 +19,7 @@
 - Since the Destination entity is connected to the Package entity through a one-to-many relationship, it includes a collection property called Packages to refer to the related packages. The Destination class is placed in the Models folder and is decorated with appropriate attributes.
 - Define the Package entity class, which represents the travel packages table. It includes properties such as Id, Name, Description, Price, DurationInDays, StartValidityDate, EndValidityDate, MyDestination, and DestinationId. We apply attributes to specify length limits and define the foreign key relationship with the Destination entity.
 - The DestinationId property acts as the external key for the one-to-many relationship between packages and destinations. By explicitly representing the foreign key, we can simplify update operations and queries.
+
+### Defining the mapped collections
+- Define the in-memory collections that represent the database tables in our MainDbContext class. We add DbSet<T> collection properties for each entity, T, in our case, Package and Destination. These properties are named in plural form, following the convention of pluralizing the entity name.
+- By adding these DbSet properties, we provide Entity Framework Core with the necessary information to interact with the corresponding database tables.
