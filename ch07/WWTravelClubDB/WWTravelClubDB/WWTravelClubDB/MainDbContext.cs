@@ -9,5 +9,8 @@ public class MainDbContext : DbContext
     {
 
     }
-}
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
 
+    }
+}
