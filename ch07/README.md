@@ -23,3 +23,11 @@
 ### Defining the mapped collections
 - Define the in-memory collections that represent the database tables in our MainDbContext class. We add DbSet<T> collection properties for each entity, T, in our case, Package and Destination. These properties are named in plural form, following the convention of pluralizing the entity name.
 - By adding these DbSet properties, we provide Entity Framework Core with the necessary information to interact with the corresponding database tables.
+
+### Completing the mapping configuration
+- We complete the mapping configuration by adding additional configuration code using a fluent interface. We use the `OnModelCreating` method in our `DbContext` class to define the configuration information for each entity.
+- The configuration information includes defining relationships between entities, specifying foreign keys, setting up indexes, and more. We can configure one-to-many relationships, specifying the navigation properties and foreign keys. We can also define indexes using attributes or with the `HasIndex` method.
+- Additionally, we can create separate configuration classes for each entity to group entity-specific configuration options. These classes implement the `IEntityTypeConfiguration<>` interface and define the configuration in the `Configure` method. We can apply the configuration classes using attributes or by calling the `Configure` method within the `OnModelCreating` method.
+- It is important to note that the configuration can be customized based on individual preferences and project requirements. The example provided shows how to configure a one-to-many relationship and use configuration classes for specific entities.
+- Lastly, Entity Framework Core also supports many-to-many relationships, allowing for the creation of join entities and join tables.
+- Once the mapping configuration is complete, we can proceed to create the database and handle database structure updates as the application evolves.

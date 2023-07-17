@@ -31,5 +31,12 @@ public class MainDbContext : DbContext
         builder.Entity<Package>()
             .Property(m => m.Price)
             .HasPrecision(10, 3);
+
+        // Apply Extra Destination from Config class
+        new DestinationConfiguration()
+                .Configure(builder.Entity<Destination>());
+        // Apply Extra Package from Config class
+        new PackageConfiguration()
+            .Configure(builder.Entity<Package>());
     }
 }

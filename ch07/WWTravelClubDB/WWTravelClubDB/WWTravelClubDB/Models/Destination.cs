@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WWTravelClubDB.Models
 {
+    [EntityTypeConfiguration(typeof(DestinationConfiguration))]
     public class Destination
     {
         public int Id { get; set; }
