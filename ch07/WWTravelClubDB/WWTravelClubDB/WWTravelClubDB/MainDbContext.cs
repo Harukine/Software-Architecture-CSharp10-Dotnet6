@@ -14,6 +14,18 @@ public class MainDbContext : DbContext
     }
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        // Configuration mapping for Destination
+        builder.Entity<Destination>()
+            .HasMany(m => m.Packages)
+            .WithOne(m => m.MyDestination)
+            .HasForeignKey(m => m.DestinationId)
+            .OnDelete(DeleteBehavior.Cascade);
 
+        // Configuration mapping for Package
+        builder.Entity<Package>()
+            .HasOne(m => m.MyDestination)
+            .WithMany(m => m.Packages)
+            .HasForeignKey(m => m.DestinationId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
