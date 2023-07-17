@@ -27,5 +27,9 @@ public class MainDbContext : DbContext
             .WithMany(m => m.Packages)
             .HasForeignKey(m => m.DestinationId)
             .OnDelete(DeleteBehavior.Cascade);
+        // Extra settings for Package
+        builder.Entity<Package>()
+            .Property(m => m.Price)
+            .HasPrecision(10, 3);
     }
 }
