@@ -31,3 +31,19 @@
 - It is important to note that the configuration can be customized based on individual preferences and project requirements. The example provided shows how to configure a one-to-many relationship and use configuration classes for specific entities.
 - Lastly, Entity Framework Core also supports many-to-many relationships, allowing for the creation of join entities and join tables.
 - Once the mapping configuration is complete, we can proceed to create the database and handle database structure updates as the application evolves.
+
+## Entity Framework Core migrations
+- We explore Entity Framework Core migrations, which are used to generate the physical database and create a database structure snapshot that allows Entity Framework Core to interact with the database.
+- We have two options to use the Entity Framework Core design tools for migrations: the tools that work in any operating system console using the `dotnet ef` format, and the tools specific to the Visual Studio Package Manager Console.
+- The process of working with migrations involves several steps:
+1. Modify the `DbContext` and entity definitions as needed.
+2. Use the Entity Framework Core design tools to detect and process the changes made in the `DbContext` and entities.
+3. The design tools update the database structure snapshot and generate a new migration file containing instructions to modify the physical database to reflect the changes.
+4. Another tool is used to apply the migration and update the database with the new changes.
+5. Test the newly configured database layer and, if necessary, make further changes and create new migrations.
+6. Deploy the data layer to staging or production, where all migrations are applied to the actual database.
+- If we are working with an existing database, we need to configure the `DbContext` and models to reflect the existing database structure. We can use the design tools with the `IgnoreChanges` option to generate an empty migration and synchronize the database structure version with the database snapshot.
+- To enable the design tools to interact with the database, we need to define the `DbContextOptions` options that include the connection string of the test/design database. This is done by implementing the `IDesignTimeDbContextFactory<>` interface.
+- To create a migration, we use the `Add-Migration` command in the Package Manager Console, specifying the migration name. If we encounter errors, we can use the `Remove-Migration` command to undo the migration and make necessary changes to the code.
+- The migration files contain the `Up` and `Down` methods, where `Up` represents the migration, and `Down` undoes its changes.
+- Finally, migrations can be applied to the database using the `Update-Database` command in the Package Manager Console or the `dotnet ef database update` command in the console.
