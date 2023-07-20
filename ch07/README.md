@@ -47,3 +47,8 @@
 - To create a migration, we use the `Add-Migration` command in the Package Manager Console, specifying the migration name. If we encounter errors, we can use the `Remove-Migration` command to undo the migration and make necessary changes to the code.
 - The migration files contain the `Up` and `Down` methods, where `Up` represents the migration, and `Down` undoes its changes.
 - Finally, migrations can be applied to the database using the `Update-Database` command in the Package Manager Console or the `dotnet ef database update` command in the console.
+
+### Understanding stored procedures and direct SQL commands
+- To incorporate database structures like stored procedures and direct SQL commands, Entity Framework Core commands and declarations are not sufficient. Instead, we can manually include stored procedures or generic SQL strings in the `Up` and `Down` methods of a migration using the `migrationBuilder.Sql("<sql command>")` method.
+- To do this safely, we can create an empty migration that doesn't perform any configuration changes. Then, we add the necessary SQL commands to the `Up` method and their inverse commands in the `Down` method. Storing SQL strings in resource files (.resx files) is a recommended practice.
+- Before interacting with the database, an optional step can be performed: model optimizations.
