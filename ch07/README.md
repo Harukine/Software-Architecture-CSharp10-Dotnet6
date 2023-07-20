@@ -52,3 +52,9 @@
 - To incorporate database structures like stored procedures and direct SQL commands, Entity Framework Core commands and declarations are not sufficient. Instead, we can manually include stored procedures or generic SQL strings in the `Up` and `Down` methods of a migration using the `migrationBuilder.Sql("<sql command>")` method.
 - To do this safely, we can create an empty migration that doesn't perform any configuration changes. Then, we add the necessary SQL commands to the `Up` method and their inverse commands in the `Down` method. Storing SQL strings in resource files (.resx files) is a recommended practice.
 - Before interacting with the database, an optional step can be performed: model optimizations.
+
+## Compiled models
+- In Entity Framework Core version 6, compiled models can be created to significantly improve performance, especially for models with numerous entities. This is achieved by generating code that, once compiled together with the data layer project, creates optimized data structures used by the context classes.
+- The Optimize-DbContext or `dotnet ef dbcontext optimize` command, provided by the Microsoft.EntityFrameworkCore.Tools NuGet package, is used to generate the optimization code. It requires specifying the folder name and namespace to store the generated classes. The optimization code depends on the ORM configuration and should be repeated each time a new migration is created.
+- To enable optimizations, the root of the optimization model must be passed as an option when creating an instance of the context class. This can be achieved by using the UseModel method and providing the `Optimization.MainDbContextModel.Instance` as an argument.
+- With these optimizations in place, the data layer is ready to interact with the database through Entity Framework Core with improved performance.
