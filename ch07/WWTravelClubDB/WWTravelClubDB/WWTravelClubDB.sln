@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1706.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWTravelClubDB", "WWTravelClubDB\WWTravelClubDB.csproj", "{14B70C2D-385A-4B87-9BD3-72B80F4BFFDE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WWTravelClubDBTest", "WWTravelClubDBTest\WWTravelClubDBTest.csproj", "{680F71BE-435D-4A8E-A504-3F88D794C1BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{14B70C2D-385A-4B87-9BD3-72B80F4BFFDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B70C2D-385A-4B87-9BD3-72B80F4BFFDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B70C2D-385A-4B87-9BD3-72B80F4BFFDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680F71BE-435D-4A8E-A504-3F88D794C1BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680F71BE-435D-4A8E-A504-3F88D794C1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680F71BE-435D-4A8E-A504-3F88D794C1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680F71BE-435D-4A8E-A504-3F88D794C1BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
