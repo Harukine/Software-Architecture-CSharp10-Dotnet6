@@ -6,7 +6,7 @@ namespace WWTravelClubDB
     : IDesignTimeDbContextFactory<MainDbContext>
     {
         private const string connectionString =
-        @"Server=(localdb)\mssqllocaldb;Database=wwtravelclub;Trusted_Connection=True;MultipleActiveResultSets=true";
+        @"Server=localhost;Database=wwtravelclub;User Id=SA;Password=P@ssw0rd;Trusted_Connection=False;TrustServerCertificate=True";
         public MainDbContext CreateDbContext(params string[] args)
         {
             var builder = new DbContextOptionsBuilder<MainDbContext>();
