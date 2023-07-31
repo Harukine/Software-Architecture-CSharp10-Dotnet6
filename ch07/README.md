@@ -78,3 +78,8 @@
 - When using `ExecuteSqlRawAsync()`, you can pass parameters to the SQL command using placeholders in the SQL string and providing the corresponding parameter values as arguments.
 - For SQL commands that return collections of entities, use the FromSqlRaw() method, specifying the SQL string and any parameters.
 - To maintain separation of concerns and avoid dependencies on a specific database, it is recommended to encapsulate SQL commands within public methods in your DbContext subclasses and store SQL strings in resource files.
+
+## Handling transactions
+- To handle transactions in Entity Framework Core, you can use the BeginTransaction() method to start a transaction for a DbContext instance. All changes made to the DbContext within the transaction are passed together when SaveChangesAsync() is called.
+- To explicitly handle transactions, you can use a using block with a transaction object obtained from BeginTransaction(). Inside the using block, you can perform queries and updates, and if everything is successful, you can commit the transaction using the Commit() method. If there's an error or exception, you can roll back the transaction using the Rollback() method to undo any changes made within the transaction.
+- This approach ensures that all operations within the using block are included in the same transaction, providing better control over data consistency and integrity.
