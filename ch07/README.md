@@ -71,3 +71,10 @@
 - To create a DTO, define a separate class with properties that hold the required data. Use the LINQ Select clause to directly project data from the database into the DTO, minimizing data exchange.
 - As an example, create a PackagesListDTO class containing summary information about packages. Use a LINQ query with Select to populate the DTOs, retrieving packages available around a specific date.
 - The Main method in the console project can be used to test and display the results of the queries. Use Console.ReadKey() to pause the program and observe the output.
+
+## Issuing direct SQL commands
+- Some database operations cannot be efficiently executed using LINQ queries and in-memory entities. In such cases, direct SQL commands or stored procedures may be necessary.
+- To issue direct SQL commands, you can use the `DbContext.Database.ExecuteSqlRawAsync()` method for SQL statements that don't return entities, and `FromSqlRaw()` method of the mapped collection for SQL statements that return collections of entities.
+- When using `ExecuteSqlRawAsync()`, you can pass parameters to the SQL command using placeholders in the SQL string and providing the corresponding parameter values as arguments.
+- For SQL commands that return collections of entities, use the FromSqlRaw() method, specifying the SQL string and any parameters.
+- To maintain separation of concerns and avoid dependencies on a specific database, it is recommended to encapsulate SQL commands within public methods in your DbContext subclasses and store SQL strings in resource files.
