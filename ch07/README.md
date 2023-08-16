@@ -84,19 +84,19 @@
 - To explicitly handle transactions, you can use a using block with a transaction object obtained from BeginTransaction(). Inside the using block, you can perform queries and updates, and if everything is successful, you can commit the transaction using the Commit() method. If there's an error or exception, you can roll back the transaction using the Rollback() method to undo any changes made within the transaction.
 - This approach ensures that all operations within the using block are included in the same transaction, providing better control over data consistency and integrity.
 
-# Deploying your data layer
+## Deploying your data layer
 - When deploying your data layer to production or staging, you usually have an existing empty database. To create the required database objects, you can use migrations. By calling the context.Database.Migrate() method, you apply any pending migrations that haven't been applied to the database yet. This method can be safely called multiple times throughout the application's life cycle.
 - During deployment, you would provide a connection string to the DbContext instance. This connection string should have the necessary privileges to create tables and perform migration operations, and it might be different from the connection string used during normal application operations.
 - For web applications deployed on platforms like Azure, you can automatically check and apply migrations during deployment. For desktop applications, you typically apply migrations during the application's installation or updates.
 - In cases where you need to populate tables with initial data, you can do so at application start or during installation. You can use Entity Framework Core commands to populate tables. Before adding data, it's advisable to check if the table is empty to avoid duplicating rows.
 
-# Understanding Entity Framework Core advanced features
+## Understanding Entity Framework Core advanced features
 - Entity Framework Core offers advanced features that are valuable for specific scenarios. Global filters, introduced in 2017, enable techniques like soft deletes and multi-tenant tables, where each user sees their own records. These filters are defined using the modelBuilder object within the OnModelCreating method of the DbContext. Filters can be based on DbContext properties, allowing for dynamic data filtering based on user attributes.
 - Mapping entities to un-updatable database queries is a feature introduced in version 5. This allows entities to be mapped to database views or tables explicitly. If a view is not updatable, an entity can be mapped to both a view and a table, using the view for queries and the table for updates. This is useful when transitioning from an old table version to a new one while still needing data from both versions.
 - Setting property defaults is another interesting feature. This is done through the ConfigureConventions DbContext method override. Default precision for decimal properties or maximum length for string properties can be specified using this feature.
 - Entity Framework Core 6 introduces additional features like historical tables, allowing you to track changes in data over time. These advanced features are covered in the official documentation.
 
-# Summary
+## Summary
 - In this chapter, we explored the fundamentals of Object-Relational Mapping (ORM) and its significance. We delved into Entity Framework Core, discussing database mapping configuration using class annotations and DbContext subclasses. We covered how to create optimized data structures for enhanced performance and manage database changes using migrations. Querying and updating the database using Entity Framework Core was explained, as well as how to issue direct SQL commands and handle transactions.
 - Additionally, the chapter highlighted advanced features like global filters, mapping entities to un-updatable queries, and setting property defaults. Deployment of a data layer was discussed, and the chapter concluded with a preview of using Entity Framework Core with NoSQL data models and cloud storage options, particularly in Azure.
 - The next chapter will delve into using Entity Framework Core with NoSQL data models and explore various storage options, including cloud-based solutions such as Azure.
